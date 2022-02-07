@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+}
+
+:root {
+  /* Text */
+  /* sub-heading at the top of the app UI */
+  --pale-violet: hsl(276, 100%, 81%);
+  /* chat on the left */
+  --moderate-violet: hsl(276, 55%, 52%);
+  /* chat on the right */
+  --desaturated-dark-violet: hsl(271, 15%, 43%);
+  /* placeholder text */
+  --grayish-blue: hsl(206, 6%, 79%);
+  /* main heading */
+  --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+  /* paragraph */
+  --dark-grayish-violet: hsl(270, 7%, 64%);
+  /*  */
+  /* Gradients */
+  --light-magenta: hsl(293, 100%, 63%);
+  --light-violet: hsl(264, 100%, 61%);
+  /* Secondary */
+  --white: hsl(0, 0%, 100%);
+  /* app background */
+  --light-grayish-violet: hsl(270, 20%, 96%);
+  /* submit button background */
+  --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+  /* radio button outline */
+  --very-light-magenta: hsl(289, 100%, 72%);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .border {
+  position: absolute;
+  width: 550px;
+  height: 770px;
+  background-image: linear-gradient(to bottom ,var(--light-magenta),var(--light-violet));
+  z-index: 1;
+  left: -50px;
+  top: 0;
+  border-radius: 0 0 200px 200px;
+  -webkit-border-radius: 0 0 200px 200px;
+  -moz-border-radius: 0 0 200px 200px;
+  -ms-border-radius: 0 0 200px 200px;
+  -o-border-radius: 0 0 200px 200px;
+}
+
+main .mobaile {
+  width: 350px;
+  height: auto;
+  background: var(--light-grayish-violet);
+  border: 10px solid var(--white);
+  z-index: 2;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+main .mobaile .header-chat {
+  width: 100%;
+  height: 70px;
+  background-image: linear-gradient(to left ,var(--light-magenta),var(--light-violet));
+  padding: 20px 15px 0;
+  position: relative;
+  display: flex;
+  border-radius: 15px 15px 5px 5px;
+  -webkit-border-radius: 15px 15px 5px 5px;
+  -moz-border-radius: 15px 15px 5px 5px;
+  -ms-border-radius: 15px 15px 5px 5px;
+  -o-border-radius: 15px 15px 5px 5px;
+}
+
+main .mobaile .header-chat::before {
+  content: "";
+  width: 200px;
+  height: 25px;
+  background: var(--white);
+  position: absolute;
+  top: -10px;
+  left: 20%;
+  border-radius: 0 0 15px 15px;
+  -webkit-border-radius: 0 0 15px 15px;
+  -moz-border-radius: 0 0 15px 15px;
+  -ms-border-radius: 0 0 15px 15px;
+  -o-border-radius: 0 0 15px 15px;
+}
+
+main .mobaile .header-chat .image {
+  width: 24px;
+  height: 24px;
+  margin-left: 50px;
+  position: relative;
+}
+
+main .mobaile .header-chat .image img {
+  max-width: 100%;
+  max-height: 100%;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+main .mobaile .header-chat .image::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border: 4px solid;
+  border-color: transparent transparent var(--white) var(--white);
+  position: absolute;
+  left: -40px;
+  top: 10px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+main .mobaile .header-chat .text {
+  width: 150px;
+  height: 50px;
+  margin-left: 15px;
+}
+
+main .mobaile .header-chat .text h2 {
+  color: var(--white);
+  font-weight: 500;
+}
+
+main .mobaile .header-chat .text p {
+  color: var(--grayish-blue);
+  font-size: 12px;
+}
+
+main .mobaile .header-chat .icon {
+  padding: 5px 0 0 55px;
+}
+
+main .mobaile .header-chat .icon span {
+  display: block;
+  background: var(--white);
+  width: 5px;
+  height: 5px;
+  margin: 3px 0;
+}
+
+main .mobaile .body-chat {
+  background: #f5f3f8;
+  padding: 10px;
+  border-radius: 0 0 25px 25px;
+  -webkit-border-radius: 0 0 25px 25px;
+  -moz-border-radius: 0 0 25px 25px;
+  -ms-border-radius: 0 0 25px 25px;
+  -o-border-radius: 0 0 25px 25px;
+}
+
+main .mobaile .body-chat .sender {
+  background: #ede4f5;
+  width: 240px;
+  height: auto;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px 10px 10px 0;
+  -webkit-border-radius: 10px 10px 10px 0;
+  -moz-border-radius: 10px 10px 10px 0;
+  -ms-border-radius: 10px 10px 10px 0;
+  -o-border-radius: 10px 10px 10px 0;
+}
+
+main .mobaile .body-chat .sender p {
+  color: var(--moderate-violet);
+}
+
+main .mobaile .body-chat .image-recipient {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 0 5px;
+}
+
+main .mobaile .body-chat .image-recipient .image {
+  width: 40px;
+  height: 40px;
+  margin: 0 8px;
+}
+
+main .mobaile .body-chat .image-recipient .image img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+main .mobaile .body-chat .recipient {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 15px;
+}
+
+main .mobaile .body-chat .recipient .mesage {
+  width: 200px;
+  height: auto;
+  background: var(--white);
+  padding: 10px;
+  margin: 5px 0;
+  box-shadow: 0 0 1px 0 rgb(158, 153, 153);
+  border-radius: 10px 10px 0 10px;
+  -webkit-border-radius: 10px 10px 0 10px;
+  -moz-border-radius: 10px 10px 0 10px;
+  -ms-border-radius: 10px 10px 0 10px;
+  -o-border-radius: 10px 10px 0 10px;
+}
+
+main .mobaile .body-chat .commodity {
+  background-image: linear-gradient(to right ,var(--light-magenta),var(--light-violet));
+  display: flex;
+  width: 270px;
+  height: auto;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 10px 10px 10px 0;
+  -webkit-border-radius: 10px 10px 10px 0;
+  -moz-border-radius: 10px 10px 10px 0;
+  -ms-border-radius: 10px 10px 10px 0;
+  -o-border-radius: 10px 10px 10px 0;
+}
+
+main .mobaile .body-chat .commodity .radio {
+  margin-top: 5px;
+}
+
+main .mobaile .body-chat .commodity .radio + label {
+  padding-left: 10px;
+  font-weight: 500;
+  color: var(--dark-grayish-violet);
+}
+
+main .mobaile .body-chat .commodity p {
+  color:var(--white);
+  font-weight: 700;
+  padding-left: 50px;
+}
+
+main .mobaile .body-chat .commodity .pbottom {
+  padding-left: 80px;
+}
+
+main .mobaile .body-chat .message {
+  position: relative;
+}
+
+main .mobaile .body-chat .message::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border: 3px solid;
+  border-color: var(--white) var(--white) transparent transparent;
+  position: absolute;
+  top: 21px;
+  right: 20px;
+  z-index: 2;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+main .mobaile .body-chat .message::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background: var(--very-dark-desaturated-violet);
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+main .mobaile .body-chat .message input {
+  border: none;
+  margin-top: 5px;
+  padding: 15px 100px 10px 20px;
+  color: var(--grayish-blue);
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+}
+
+main .mobaile .body-chat .message input:focus-visible {
+  outline-color: var(--light-magenta);
+}
+
+main .disc {
+  width: 560px;
+  height: 220px;
+  padding-left: 125px;
+}
+
+main .disc h1 {
+  color: var(--very-dark-desaturated-violet);
+  font-size: 38px;
+}
+
+main .disc p {
+  color: var(--dark-grayish-violet);
+  line-height: 2;
+  padding-top: 30px;
+}
+
+@media (max-width: 767px) {
+  main {
+    height: 150vh;
+    flex-direction: column;
+  }
+  main .border {
+    height: 700px;
+    left: -350px;
+  }
+  main .disc {
+    width: 310px;
+    height: auto;
+    padding: 70px 0 20px 0;
+    text-align: center;
+    }
+}
+
+.attribution {
+  font-size: 11px; text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
